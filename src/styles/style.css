@@ -28,7 +28,6 @@ a {
 .container-box {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .mobile-container-box {
@@ -44,6 +43,9 @@ a {
 /* ========================= Utility Classes ======================== */
 
 /* === Nav bar === */
+.header {
+  padding-bottom: 20px;
+}
 
 .navbar {
   display: flex;
@@ -97,6 +99,10 @@ a {
   font-weight: 800;
   color: #333;
 }
+.active-text-underline {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
 
 .fa-close:hover {
   color: rgb(233, 39, 39);
@@ -123,7 +129,6 @@ a {
 /* === Desktop navbar === */
 
 .desktop-navbar {
-  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -197,6 +202,8 @@ a {
 }
 
 .item-image {
+  background-size: cover;
+  background-position: center;
   object-fit: cover;
 }
 
@@ -242,9 +249,86 @@ a {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
   text-align: center;
   transition: 0.5s;
+}
+
+/* ========== List Itmes ========== */
+
+.hero-image {
+  /* max-width: 100%; */
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 765px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products .hero-text {
+  padding-top: 40px;
+}
+
+.products .hero-text h3 {
+  color: #333;
+}
+
+.products .hero-text p {
+  color: #333;
+}
+
+.product-lists {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-lists .product-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  grid-column: span;
+  padding-top: 20px;
+}
+
+.product-lists .product-item img {
+  width: 33vmin;
+  padding-bottom: 4rem;
+}
+
+.product-lists .product-item h3 {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 765px) {
+  .product-lists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-lists .product-item h3 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+  }
 }
