@@ -28,7 +28,6 @@ a {
 .container-box {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .mobile-container-box {
@@ -44,6 +43,9 @@ a {
 /* ========================= Utility Classes ======================== */
 
 /* === Nav bar === */
+.header {
+  padding-bottom: 20px;
+}
 
 .navbar {
   display: flex;
@@ -127,7 +129,6 @@ a {
 /* === Desktop navbar === */
 
 .desktop-navbar {
-  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -306,10 +307,12 @@ a {
   gap: 10px;
   flex-direction: column;
   grid-column: span;
+  padding-top: 20px;
 }
 
 .product-lists .product-item img {
   width: 33vmin;
+  padding-bottom: 4rem;
 }
 
 .product-lists .product-item h3 {
