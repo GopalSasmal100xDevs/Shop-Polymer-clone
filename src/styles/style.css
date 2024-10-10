@@ -5,23 +5,43 @@
   vertical-align: baseline;
   box-sizing: border-box;
 }
+
 html {
   font-size: 15px;
   background-color: #ffffff;
 }
 body {
-  font-family: "Roboto", sans-serif;
-}
-
-h1,
-h2,
-h3 {
   font-family: "Poppins", sans-serif;
 }
+
+ul li {
+  list-style: none;
+}
+
 a {
   color: black;
   text-decoration: none;
 }
+
+/* ========================= Utility Classes ======================== */
+
+.container-box {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mobile-container-box {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container-sm {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* ========================= Utility Classes ======================== */
 
 /* === Nav bar === */
 
@@ -141,7 +161,7 @@ a {
 }
 
 .items {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -151,41 +171,13 @@ a {
 }
 
 .item {
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
   font-size: 17px;
-}
-
-.split-item {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.item-one,
-.item-two {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.split-item .shop-now-btn {
-  padding: 8px 22px;
-}
-
-.split-item img {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
 }
 
 .sub-items {
@@ -196,8 +188,14 @@ a {
   gap: 30px;
 }
 
-.item-image {
+.item a {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-image {
   object-fit: cover;
 }
 
@@ -205,6 +203,26 @@ a {
   padding: 8px 44px;
   border: 2px solid #202020;
   cursor: pointer;
+}
+
+.splited-items {
+  max-width: 1440px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+.splited-items .item {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splited-items .item-image {
+  width: 100%;
+  object-fit: contain;
 }
 
 /*  Footer */
@@ -215,10 +233,19 @@ a {
   flex-direction: column;
   gap: 20px;
   padding-top: 50px;
+  position: relative;
+  bottom: 0;
 }
-.demo {
-  padding: 20px 25px;
-  background-color: #202020;
-  border-radius: 2px;
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background: #333;
   color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
 }
