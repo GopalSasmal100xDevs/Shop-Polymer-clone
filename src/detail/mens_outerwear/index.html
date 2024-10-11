@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      sizes="32x32"
+      href="../../images/shop-icon-32.png"
+    />
+
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-item">
+          <button id="list-btn">
+            <i class="fa fa-bars" style="font-size: 24px"></i>
+          </button>
+        </div>
+        <div class="nav-item">
+          <h1 class="shop-name">
+            <a href="../../index.html">Shop</a>
+          </h1>
+        </div>
+        <div class="nav-item">
+          <a href="./cart/index.html">
+            <i class="fa fa-shopping-cart" style="font-size: 24px"></i>
+          </a>
+        </div>
+      </nav>
+      <div class="desktop-navbar">
+        <ul class="desktop-nav-items">
+          <li>
+            <a
+              class="active-text-underline"
+              href="../../list/mens_outwear.html"
+            >
+              Men's Outerwear
+            </a>
+          </li>
+          <li>
+            <a href="../../list/ladies_outwear.html"> Ladies Outerwear </a>
+          </li>
+          <li>
+            <a href="../../list/mens_tshirt.html"> Men's T-Shirts </a>
+          </li>
+          <li>
+            <a href="../../list/ladies_tshirt.html">Ladies T-Shirts</a>
+          </li>
+        </ul>
+      </div>
+      <div id="drawer-box" class="drawer">
+        <div class="drawer-container">
+          <ul>
+            <li>
+              <a href="../../list/mens_outwear.html"> Men's Outerwear </a>
+            </li>
+            <li>
+              <a href="../../list/ladies_outwear.html"> Ladies Outerwear </a>
+            </li>
+            <li>
+              <a href="../../list/mens_tshirt.html"> Men's T-Shirts </a>
+            </li>
+            <li>
+              <a href="../../list/ladies_tshirt.html">Ladies T-Shirts</a>
+            </li>
+          </ul>
+
+          <div class="close-drawer">
+            <i class="fa fa-close" style="font-size: 2vmax"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-box">
+      <div class="content container-box">
+        <div class="product-image">
+          <img
+            src="../../images/outwears-for-men/10-14146B.jpg"
+            alt="outwears-for-men"
+            class=""
+          />
+        </div>
+        <div class="detail">
+          <h1 class="product-title">Anvil L/S Crew Neck - Grey</h1>
+          <div class="price">$50.80</div>
+
+          <div class="select-group">
+            <div class="hr-line"></div>
+
+            <div class="select-container">
+              <label id="sizeLabel">Size</label>
+              <select id="sizeSelect">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </div>
+
+            <div class="select-container">
+              <label id="quantityLabel">Quantity</label>
+              <select id="quantitySelect">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="description">
+            <h2>Description</h2>
+
+            <p class="desc">
+              A versatile full-zip that you can wear all day long and even to
+              the gym. This technical shell features moisture-wicking fabric,
+              added stretch and a hidden pocket for your smartphone or media
+              player.
+            </p>
+
+            <h4 class="feature">Features:</h4>
+            <ul class="features-list">
+              <li>100% polyester.</li>
+              <li>Smooth, technical front with textured mesh back.</li>
+              <li>Drawstring bottom for adjustable fit.</li>
+              <li>Raglan sleeves.</li>
+              <li>
+                Available in forest green with the white Google logo embroidered
+                at left chest.
+              </li>
+            </ul>
+          </div>
+          <div class="add-to-cart-btn">
+            <button class="cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          Made by
+          <span>
+            <a href="https://github.com/mountblue" target="_blank"
+              >@mountblue</a
+            >
+            devlopers
+          </span>
+        </p>
+        <div class="btn">Demo Only</div>
+      </div>
+    </footer>
+
+    <script src="../../script/index.js"></script>
+  </body>
+</html>
