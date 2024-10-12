@@ -23,8 +23,9 @@ a {
 
 .container-box {
   max-width: 1440px;
+  height: auto;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 .mobile-container-box {
@@ -74,6 +75,7 @@ a {
 
 /* === Nav bar === */
 .header {
+  background-color: #fff;
   padding-bottom: 20px;
   z-index: 100;
 }
@@ -234,6 +236,8 @@ a {
 }
 
 .item-image {
+  width: 100%;
+  height: 33vh;
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -254,15 +258,22 @@ a {
   flex-direction: row;
   overflow: hidden;
 }
+
 .splited-items .item {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.splited-items .item-image {
+
+.splited-items .item a {
   width: 100%;
-  object-fit: contain;
+}
+
+.splited-items a .item-image {
+  width: 100%;
+  height: 33vh;
+  object-fit: cover;
 }
 
 /*  Footer */
@@ -276,7 +287,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* position: absolute; */
   bottom: 0;
   gap: 20px;
   padding-top: 50px;
@@ -296,7 +306,6 @@ a {
 /* ========== List Itmes ========== */
 
 .hero-image {
-  /* max-width: 100%; */
   padding-top: 30px;
   display: flex;
   justify-content: center;
@@ -392,6 +401,7 @@ a {
 }
 
 .description {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -404,27 +414,30 @@ a {
 }
 
 .description .desc {
+  width: 100%;
   color: #797979;
 }
 .description .feature {
+  width: 100%;
+  text-wrap: wrap;
   font-size: 0.8rem;
   color: #797979;
 }
 
 .description .features-list {
-  position: relative;
-  left: 40px;
   color: #797979;
   z-index: -1;
+  padding-left: 40px;
 }
 
-.content .detail {
+.detail {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
+  padding: 25px;
 }
 
 .select-group {
@@ -674,12 +687,14 @@ option {
   object-fit: cover;
 }
 
+/* Mobile */
 @media screen and (max-width: 530px) {
-  .cart-container .c-items .c-item {
+  .c-item {
     justify-content: center;
   }
 }
 
+/* Tablet and Laptop */
 @media screen and (min-width: 765px) {
   .product-lists {
     grid-template-columns: repeat(3, 1fr);
@@ -723,7 +738,6 @@ option {
   }
   .cart-container .c-items {
     display: none;
-    border: 1px solid red;
   }
 
   .cart-container .cart-desktop-items {
@@ -731,5 +745,19 @@ option {
   }
   .cart-price button {
     display: flex;
+  }
+
+  .desktop-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 20px;
+  }
+  .add-to-cart-btn .cart-btn {
+    margin-left: 27px;
   }
 }
