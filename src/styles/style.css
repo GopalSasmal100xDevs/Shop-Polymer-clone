@@ -775,7 +775,6 @@ option {
 #select-month,
 #select-year {
   text-align: start;
-  padding-bottom: 5px;
 }
 .diff-bill {
   font-size: 0.8rem;
@@ -816,38 +815,56 @@ option {
 }
 
 /* ========== Input animation ========== */
+
 .input-container {
+  width: 100%;
   position: relative;
-  margin-top: 30px;
-  width: 100%;
-  display: inline-block;
+  margin: 30px auto;
 }
-input,
-.bottom-line {
+
+.input-container input[type="text"] {
+  font-size: 20px;
   width: 100%;
-  padding: 15px 10px 8px;
   border: none;
   border-bottom: 1px solid #ccc;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-}
-input:focus {
+  padding: 5px 0;
+  background-color: transparent;
   outline: none;
-  border-bottom: 2px solid #000;
 }
-.input-label {
+
+.input-container .label {
   position: absolute;
-  top: 15px;
-  left: 0px;
-  color: #999;
-  font-size: 16px;
-  transition: all 0.2s ease;
+  top: 0;
+  left: 0;
+  color: #797979;
+  transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
-input:focus + .input-label {
-  top: -10px;
-  font-size: 16px;
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 12px;
+  color: #333;
 }
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+/* ========== Input animation ========== */
 #CVV {
   margin-bottom: 14px;
 }
@@ -899,8 +916,6 @@ input:focus + .input-label {
   justify-content: center;
   align-items: center;
 }
-
-/* ========== Input animation ========== */
 
 /* Mobile */
 @media screen and (max-width: 530px) {

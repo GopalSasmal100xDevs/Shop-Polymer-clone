@@ -50,44 +50,49 @@
         <div class="account-info">
           <div class="account-info-part">
             <h3 class="checkout-acc-heading">Account Information</h3>
-            <div class="input-container email h7">
-              <input type="text" id="email" />
-              <label class="input-label" for="email">Email</label>
-            </div>
             <div class="input-container">
-              <input type="text" id="Phone Number" />
-              <label class="input-label" for="Phone Nmber">Phone Number</label>
+              <input type="text" required="" />
+              <label for="input" class="label">Email</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="input-container">
+              <input type="text" required="" />
+              <label for="input" class="label">Phone Number</label>
+              <div class="underline"></div>
             </div>
           </div>
 
           <div class="account-info-part">
             <h3 class="checkout-acc-heading">Shipping Address</h3>
             <div class="input-container">
-              <input type="text" id="Address" />
-              <label class="input-label" for="Address">Address</label>
+              <input type="text" required="" />
+              <label for="input" class="label">Address</label>
+              <div class="underline"></div>
             </div>
+
             <div class="input-container">
-              <input type="text" id="City" />
-              <label class="input-label" for="City">City</label>
+              <input type="text" required="" />
+              <label for="input" class="label">City</label>
+              <div class="underline"></div>
             </div>
 
             <div class="state-code-container">
               <div class="input-container">
-                <input type="text" id="State/Provence" />
-                <label class="input-label" for="State/Provence">
-                  State/Provence
-                </label>
+                <input type="text" required="" />
+                <label for="input" class="label">State/Provence</label>
+                <div class="underline"></div>
               </div>
+
               <div class="input-container">
-                <input type="text" id="Zip/Postal Code" />
-                <label class="input-label" for="Zip/Postal Code">
-                  Zip-Postal Code
-                </label>
+                <input type="text" required="" />
+                <label for="input" class="label"> Zip-Postal Code </label>
+                <div class="underline"></div>
               </div>
             </div>
 
             <div class="input-container">
-              <select id="select-countery">
+              <select id="select-countery" required>
                 <option value="India" selected>India</option>
                 <option value="United-States">United-States</option>
                 <option value="Canada">Canada</option>
@@ -115,15 +120,16 @@
         <div class="payment-info">
           <div class="payment-info-part">
             <h3 class="checkout-acc-heading">Payment Information</h3>
-            <div class="input-container email">
-              <input type="text" id="cardholderName" />
-              <label class="input-label" for="cardholderName">
-                Cardholder Name
-              </label>
-            </div>
             <div class="input-container">
-              <input type="text" id="CardNumber" />
-              <label class="input-label" for="CardNumber">Card Number</label>
+              <input type="text" required="" />
+              <label for="input" class="label">Cardholder Name</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="input-container">
+              <input type="text" required="" />
+              <label for="input" class="label">Card Number</label>
+              <div class="underline"></div>
             </div>
           </div>
 
@@ -131,7 +137,7 @@
             <h3 class="checkout-acc-heading">Expiry</h3>
             <div class="user-card-info">
               <div class="input-container">
-                <select id="select-month">
+                <select id="select-month" required>
                   <option value="Jan" selected>Jan</option>
                   <option value="Feb">Feb</option>
                   <option value="Mar">Mar</option>
@@ -148,7 +154,7 @@
               </div>
 
               <div class="input-container">
-                <select id="select-year">
+                <select id="select-year" required>
                   <option value="2026" selected>2026</option>
                   <option value="2025">2025</option>
                   <option value="2024">2024</option>
@@ -158,8 +164,9 @@
               </div>
 
               <div class="input-container">
-                <input type="text" id="CVV" maxlength="3" />
-                <label class="input-label" for="CVV">CVV</label>
+                <input type="text" required="" />
+                <label for="input" class="label">CVV</label>
+                <div class="underline"></div>
               </div>
             </div>
           </div>
