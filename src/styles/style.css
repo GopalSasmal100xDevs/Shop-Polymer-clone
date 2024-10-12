@@ -626,6 +626,7 @@ option {
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+  padding-bottom: 30px;
 }
 
 .cart-price .price {
@@ -686,6 +687,220 @@ option {
   width: 60px;
   object-fit: cover;
 }
+
+/* ========== Checkout page ========== */
+
+.checkout-container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.checkout-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+.checkout-heading {
+  font-size: 0.8rem;
+  color: #797979;
+}
+
+.checkout-descreption {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.checkout-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.account-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.payment-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.account-info-part,
+.payment-info-part {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.checkout-acc-heading {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.bill-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#select-countery,
+#select-month,
+#select-year {
+  text-align: start;
+  padding-bottom: 5px;
+}
+.diff-bill {
+  font-size: 0.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.user-card-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.order-summary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 0;
+}
+
+.order-summary-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.order-summary-item p {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* ========== Input animation ========== */
+.input-container {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  display: inline-block;
+}
+input,
+.bottom-line {
+  width: 100%;
+  padding: 15px 10px 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+.input-label {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  color: #999;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+input:focus + .input-label {
+  top: -10px;
+  font-size: 16px;
+}
+#CVV {
+  margin-bottom: 14px;
+}
+.state-code-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.place-order-btn {
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.place-order-btn button {
+  border: 2px solid #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 13px 40px;
+  background-color: #fff;
+  cursor: pointer;
+  color: #333;
+}
+
+.place-order-pc-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #172c50;
+  z-index: 10;
+}
+
+.place-order-pc-btn a {
+  width: 100%;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px 44px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== Input animation ========== */
 
 /* Mobile */
 @media screen and (max-width: 530px) {
@@ -759,5 +974,16 @@ option {
   }
   .add-to-cart-btn .cart-btn {
     margin-left: 27px;
+  }
+  .checkout-content {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .place-order-btn {
+    display: flex;
+  }
+  .place-order-pc-btn {
+    display: none;
   }
 }
